@@ -1,3 +1,4 @@
+#code
 import requests
 from LxmlSoup import LxmlSoup
 with open("parse_information.txt", "w") as file:
@@ -14,19 +15,4 @@ for text in texts:
        with open("parse_information.txt", "a") as file:
               file.write(f"#------------------------------------#\n \n{name}\n \n")
 
-#-----------------------------------------------------------#
-       
-# from LxmlSoup import LxmlSoup
-# import requests
-
-# html = requests.get('https://www.virustotal.com/gui/home/upload').text  # получаем html код сайта
-# soup = LxmlSoup(html)  # создаём экземпляр класса LxmlSoup
-
-# links = soup.find_all('a', class_='blue-link')  # получаем список ссылок и наименований
-# for i, link in enumerate(links):
-
-#     name = link.text()
-#     url = link.find('href')
-#     print(i)
-#     print(f"Url - {url}")  # извлекаем наименование из блока со ссылкой # извлекаем цену
-#     print(f"Name - {name}")
+#code's end
