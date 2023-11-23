@@ -17,9 +17,7 @@
 
 #code's end
 
-from selenium import webdriver
 import requests
-from selenium.webdriver.common.by import By
 from LxmlSoup import LxmlSoup
 
 def fail_function(function_text_name):
