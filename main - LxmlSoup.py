@@ -69,11 +69,8 @@ html = requests.get(url).text
 soup = list(LxmlSoup(html).text())
 text = ""
 list_ = []
-words = []
-word = ""
-num = 0
-enter = 0
-por = 1
+input_word = input("Search Word: ")
+
 for i in range(len(soup)):
        i_t = i + 1
        if i != len(soup) - 1:
@@ -91,5 +88,5 @@ for g in list_:
                              if g.find('"') == -1:
                                      if g.find("'") == -1:
                                           
-                                          if g.find("Википедия") != -1 and len(g) >= 20:
+                                          if g.find(input_word) != -1 and len(g) >= 20:
                                                  print(f"::{g}")
