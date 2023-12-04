@@ -64,12 +64,13 @@
 import requests
 from LxmlSoup import LxmlSoup
 
-url = "https://ru.wikipedia.org/wiki/Википедия"
+input_word = input("Search Word: ")
+url = "https://ru.wikipedia.org/wiki/" + input
 html = requests.get(url).text
 soup = list(LxmlSoup(html).text())
 text = ""
 list_ = []
-input_word = input("Search Word: ")
+
 
 for i in range(len(soup)):
        i_t = i + 1
