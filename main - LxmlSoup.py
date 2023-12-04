@@ -65,7 +65,7 @@ import requests
 from LxmlSoup import LxmlSoup
 
 input_word = input("Search Word: ")
-url = "https://ru.wikipedia.org/wiki/" + input
+url = "https://ru.wikipedia.org/wiki/" + input_word
 html = requests.get(url).text
 soup = list(LxmlSoup(html).text())
 text = ""
